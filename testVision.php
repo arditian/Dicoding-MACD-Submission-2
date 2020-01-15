@@ -15,28 +15,37 @@ if (isset($_POST['submit'])) {
 <head>
     <title>Analyze Sample</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-
-    <script language="javascript">
-        document.getElementById('analyze_btn').click(); 
-    </script>
-
 </head>
 <body>
  
 <script type="text/javascript">
     function processImage() {
-        
+        // **********************************************
+        // *** Update or verify the following values. ***
+        // **********************************************
+ 
+        // Replace <Subscription Key> with your valid subscription key.
         var subscriptionKey = "4e69882247764047b432825809dd9f55";
  
+        // You must use the same Azure region in your REST API method as you used to
+        // get your subscription keys. For example, if you got your subscription keys
+        // from the West US region, replace "westcentralus" in the URL
+        // below with "westus".
+        //
+        // Free trial subscription keys are generated in the "westus" region.
+        // If you use a free trial subscription key, you shouldn't need to change
+        // this region.
         var uriBase =
             "https://southeastasia.api.cognitive.microsoft.com/vision/v2.0/analyze";
  
+        // Request parameters.
         var params = {
             "visualFeatures": "Categories,Description,Color",
             "details": "",
             "language": "en",
         };
  
+        // Display the image.
         var sourceImageUrl = document.getElementById("inputImage").value;
         document.querySelector("#sourceImage").src = sourceImageUrl;
  
@@ -97,5 +106,3 @@ document.getElementById('analyze_btn').click();
         <img id="sourceImage" width="400" />
     </div>
 </div>
-</body>
-</html>
