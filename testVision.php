@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
         var subscriptionKey = "4e69882247764047b432825809dd9f55";
  
         var uriBase =
-            "https://submission2ardit.cognitiveservices.azure.com/";
+            "https://southeastasia.api.cognitive.microsoft.com/vision/v2.0/analyze";
  
         var params = {
             "visualFeatures": "Categories,Description,Color",
