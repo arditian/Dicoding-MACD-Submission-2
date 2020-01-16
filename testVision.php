@@ -71,16 +71,13 @@
 </script>
  
 <h1>Analyze image:</h1>
-Tekan tombol <strong>Analyze image</strong> untuk memulai proses analisis gambar.
+Enter the URL to an image, then click the <strong>Analyze image</strong> button.
 <br><br>
-URL gambar:
+Image to analyze:
 <input type="text" name="inputImage" id="inputImage"
     value="http://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg" />
 <button onclick="processImage()">Analyze image</button>
 <br><br>
-<script language="javascript">
-document.getElementById('analyze_btn').click(); 
-</script>
 <div id="wrapper" style="width:1020px; display:table;">
     <div id="jsonOutput" style="width:600px; display:table-cell;">
         Response:
@@ -94,3 +91,5 @@ document.getElementById('analyze_btn').click();
         <img id="sourceImage" width="400" />
     </div>
 </div>
+</body>
+</html>
