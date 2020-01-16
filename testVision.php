@@ -75,8 +75,8 @@ Tekan tombol <strong>Analyze image</strong> untuk memulai proses analisis gambar
 <br><br>
 URL gambar:
 <input type="text" name="inputImage" id="inputImage"
-    value="<?php echo $url ?>" readonly />
-<button id="analyze_btn" onclick="processImage()">Analyze image</button>
+    value="http://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg" />
+<button onclick="processImage()">Analyze image</button>
 <br><br>
 <script language="javascript">
 document.getElementById('analyze_btn').click(); 
